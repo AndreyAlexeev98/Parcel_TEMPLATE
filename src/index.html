@@ -10,42 +10,88 @@
   <link rel="stylesheet" href="https://unpkg.com/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2">
   <link rel="stylesheet" href="./index.css">
+  <style>
+    .canvas-btn.active {
+      color: blue;
+    }
+  </style>
 </head>
 
 <body>
-  <div data-name="tbody">
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officia magni quo qui culpa quas veritatis, accusamus distinctio voluptatum excepturi obcaecati cum harum. Iusto molestias expedita facere, provident assumenda fugit!</div>
-    <span>ssss</span>
-    <button data-hystmodal-carousel="[ data-name='modal-carousel' ]" class="listing__btn btn btn-make" data-name="stl-view" data-path="['./11.stl', './22.stl']">STL</button>
-    <span>ssss</span>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officia magni quo qui culpa quas veritatis, accusamus distinctio voluptatum excepturi obcaecati cum harum. Iusto molestias expedita facere, provident assumenda fugit!</div>
-    <span>ssss</span>
-    <button data-hystmodal-carousel="[ data-name='modal-carousel' ]" class="listing__btn btn btn-make" data-name="stl-view" data-path="['./44.stl', './33.stl']">STL</button>
-    <span>ssss</span>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officia magni quo qui culpa quas veritatis, accusamus distinctio voluptatum excepturi obcaecati cum harum. Iusto molestias expedita facere, provident assumenda fugit!</div>
-  </div>
 
+<!-- stl viewer -->
+  <!-- 
+  <section class="container">
+    <div class="slider-elem" >
+
+      <div class="viewer-2d">
+        <div style="position: relative;" class="viewer-2d-wrapper">
+          <img style="max-height: 90vh" class="viewer-2d__img" src="./ex2.jpg"/>
+          <canvas width="1168" height="847" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" class="viewer-2d__canvas" id="canvas2d">Ваш браузер не поддерживает все возможности редактора</canvas>
+          <div style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" class="canvas-disactive"></div>
+        </div>
+        
+        <div class="viewer-2d__controlls">
+          <span>Яркость:</span>
+          <button id="incrimentBrightness">+</button>
+          <button id="decrementBrightness">-</button>
+          <span>Контрастность:</span>
+          <button id="incrimentContrast">+</button>
+          <button id="decrementContrast">-</button>
+          <button class="canvas-btn" id="getLineBtn">линейка</button>
+          <button class="canvas-btn" id="getDrawBtn">Рисовать</button>
+          <br/>
+          <br/>
+          
+          <div class="panel">
+              <input type="color" id="color">
+              <input type="button" id="pClear" value="clear"> 
+              <select id="size">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+              </select>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  -->
+
+  <!-- pdf viewer -->
+  <!--
   <div class="container">
     <span>pdf</span>
-    <iframe style="width: 900px;
+     <iframe style="width: 900px;
     height: 800px;" src="./example.pdf" frameborder="0"></iframe>
   </div>
+  -->
   
+  <!-- stl viewer -->
+  <!--
+    <div data-name="tbody">
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officia magni quo qui culpa quas veritatis, accusamus distinctio voluptatum excepturi obcaecati cum harum. Iusto molestias expedita facere, provident assumenda fugit!</div>
+      <span>ssss</span>
+      <button data-hystmodal-carousel="[ data-name='modal-carousel' ]" class="listing__btn btn btn-make" data-name="stl-view" data-path="['./11.stl', './22.stl']">STL</button>
+      <span>ssss</span>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officia magni quo qui culpa quas veritatis, accusamus distinctio voluptatum excepturi obcaecati cum harum. Iusto molestias expedita facere, provident assumenda fugit!</div>
+      <span>ssss</span>
+      <button data-hystmodal-carousel="[ data-name='modal-carousel' ]" class="listing__btn btn btn-make" data-name="stl-view" data-path="['./44.stl', './33.stl']">STL</button>
+      <span>ssss</span>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officia magni quo qui culpa quas veritatis, accusamus distinctio voluptatum excepturi obcaecati cum harum. Iusto molestias expedita facere, provident assumenda fugit!</div>
+    </div>
   <section class="properties-list">
     <div class="container">
       <div id="react-properties-list"></div>
     </div>
   </section>
+   -->
 
- <script>
-   // заводим данные (например, через шаблонизатор) чтобы потом их считать в `index.js`
-   window.properties = [
-     {
-      name: 'stl',
-       id: 55,
-       price: 400
-     }]
- </script>
+
  <script src="./index.js"></script>
 </body>
 
