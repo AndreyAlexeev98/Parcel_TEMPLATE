@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { StlViewer } from "./stl-viewer";
+import Carousel from "./carousel";
+
+import './main.scss';
 
 function PropertiesList(props) {
   return (
@@ -11,13 +14,17 @@ function PropertiesList(props) {
   );
 }
 
-// рендер stl
-export function initStlViewer(props) {
-  ReactDOM.render(
-    <PropertiesList props={props}/>,  
-    document.getElementById("react-properties-list")
-  );
-};
+ReactDOM.render(
+  <Carousel/>,
+  document.getElementById("react-properties-list")  
+);
+
+// export function initStlViewer(props) {
+//   ReactDOM.render(
+//     <PropertiesList props={props}/>,
+//     document.getElementById("react-properties-list")  
+//   );
+// };
 
 // логика рендеринга stl
 
