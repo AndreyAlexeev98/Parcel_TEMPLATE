@@ -1,23 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { StlViewer } from "./stl-viewer";
 import Carousel from "./carousel";
+import { StlViewer } from "./stl-viewer";
 
-import './main.scss';
+import '/scss/main.scss';
 
-function PropertiesList(props) {
-  return (
-    <React.Fragment>
-      {props.props.map(data => <StlViewer key={data} data={data} />)}
-    </React.Fragment>
-  );
-}
-
-ReactDOM.render(
-  <Carousel/>,
-  document.getElementById("react-properties-list")  
-);
+// function PropertiesList(props) {
+//   return (
+//     <React.Fragment>
+//       {props.props.map(data => <StlViewer key={data} data={data} />)}
+//     </React.Fragment>
+//   );
+// }
 
 // export function initStlViewer(props) {
 //   ReactDOM.render(
@@ -25,6 +20,16 @@ ReactDOM.render(
 //     document.getElementById("react-properties-list")  
 //   );
 // };
+
+ReactDOM.render(
+  <Carousel/>,
+  document.getElementById("carousel")
+);
+
+
+
+
+
 
 // логика рендеринга stl
 

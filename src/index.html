@@ -7,25 +7,48 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Жилой комплекс BARKLI GALLERY</title>
 
-  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
-  <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2">
-  <link rel="stylesheet" href="./index.css">
   <style>
-    .canvas-btn.active {
-      color: blue;
+    .container-carousel {
+      max-width: 95vw;
+      margin: 0 auto;
     }
   </style>
 </head>
 
 <body>
+  <!--
+  <a href="https://disk.picasso-diagnostic.ru/RWazXbtCR87xsE9" download="" class="listing__btn btn btn-make" data-name="t-btn">Скачать</a>
+  -->
+  <br/>
+  <br/>
+  <br/>
+  <button href="#" class="listing__btn btn btn-make" data-name="t-btn" data-json='
+    [
+        {
+          "userId": 1,
+          "id": 1,
+          "type": "pdf",
+          "path": "/example.84e76d98.pdf"
+        },
+        {
+            "userId": 2,
+            "id": 2,
+            "type": "pdf",
+            "path": "/example.84e76d98.pdf"
+        }
+    ]
+  '>Просмотр</button>
 
   <!-- carousel -->
-  <div style="max-width: 80vw" class="container">
-    <div id="react-properties-list"></div>
+  <div class="container-carousel">
+
+    <div id="carousel"></div>
+
   </div>
+  
+  
 
 <!-- stl viewer -->
-  <!-- 
   <section class="container">
     <div class="slider-elem" >
 
@@ -65,7 +88,6 @@
 
     </div>
   </section>
-  -->
 
   <!-- pdf viewer -->
   <!--

@@ -7,6 +7,7 @@
     "react-day-picker": "8.4.1",
     "react-dom": "17.0.2",
     "react-scripts": "4.0.0",
+    "scss": "^0.2.4",
     "three": "0.126.1",
     "three-stl-loader": "1.0.6"
   },
