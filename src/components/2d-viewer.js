@@ -1,19 +1,12 @@
 import React from "react";
-import pathToPdf from "/example.pdf";
 
-const rootComponent = document.querySelector('.viewer-2d');
-const img2D = rootComponent.querySelector('.viewer-2d__img');
-
-// Яркость / контрастнорсть
-
-function funstionName(argsumentsFunc) {
-  // some function 
-}
-
-export class PdfViewer extends React.Component {
-  
+export class Viewer2D extends React.Component {
+ 
   componentDidMount() {
-
+    const rootComponent = document.querySelector('.viewer-2d');
+    const img2D = rootComponent.querySelector('.viewer-2d__img');
+    
+    // Яркость / контрастнорсть
     ;(function setFilters() {
   
       const btnIncrementContrast = document.querySelector('#incrimentContrast');
@@ -48,7 +41,7 @@ export class PdfViewer extends React.Component {
         return countBrightness;
       });
     })();
-    
+   
     // Canvas
     ;(function setCanvas(){
     
@@ -172,11 +165,8 @@ export class PdfViewer extends React.Component {
     
       // Рисовать
       function getDraw() {
-        // theCanvas.style.width = '1168px';
-        // theCanvas.style.height = '847px';
-    
-        theCanvas.style.width = img2D.clientWidth;
-        theCanvas.style.height = img2D.clientHeight;
+        theCanvas.width = img2D.clientWidth;
+        theCanvas.height = img2D.clientHeight;
     
         var myColor = 'black';
         var rSize = 1;
@@ -220,13 +210,46 @@ export class PdfViewer extends React.Component {
       };
     
     })();
-
-
   }
 
   render() {
-    return <iframe className='pdf-viewer' src={ this.props.filePath.path }/>
-    //return <div className="stl-viewer" ref={(ref) => (this.mount = ref)} />;
+    return ( 
+      <div>
+        <div className="viewer-2d">
+          <div className="viewer-2d-wrapper">
+            <img className="viewer-2d__img" role="presentation" src={this.props.data}/>
+            <canvas className="viewer-2d__canvas" id="canvas2d">Ваш браузер не поддерживает все возможности редактора</canvas>
+            <div className="canvas-disactive"></div>
+          </div>
+          
+          <div className="viewer-2d__controlls">
+            <span>Яркость:</span>
+            <button id="incrimentBrightness">+</button>
+            <button id="decrementBrightness">-</button>
+            <span>Контрастность:</span>
+            <button id="incrimentContrast">+</button>
+            <button id="decrementContrast">-</button>
+            <button className="canvas-btn" id="getLineBtn">линейка</button>
+            <button className="canvas-btn" id="getDrawBtn">Рисовать</button>
+            <br/>
+            <br/>
+            
+            <div className="panel">
+                <input type="color" id="color"/>
+                <input type="button" id="pClear" value="clear"/> 
+                <select id="size">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    ) 
   }
 
 }
